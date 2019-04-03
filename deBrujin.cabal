@@ -1,0 +1,67 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.1.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 0e80246ccd635047757ddf7b7e04c3064f9b7b3a1bf57901c6b9d52787201375
+
+name:           deBrujin
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/deBrujin#readme>
+homepage:       https://github.com/githubuser/deBrujin#readme
+bug-reports:    https://github.com/githubuser/deBrujin/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2019 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/deBrujin
+
+library
+  exposed-modules:
+      Check_args
+      Debrujin
+      Lib
+      Plain
+      Test
+      Tools
+  other-modules:
+      Paths_deBrujin
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable deBrujin
+  main-is: Main.hs
+  other-modules:
+      Paths_deBrujin
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , deBrujin
+  default-language: Haskell2010
+
+test-suite deBrujin-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_deBrujin
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , deBrujin
+  default-language: Haskell2010
